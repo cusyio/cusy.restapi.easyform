@@ -1,0 +1,60 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone">
+
+  <!-- IEmail -->
+  <adapter
+      factory=".adapters.CusyEmailJsonSchemaProvider"
+      />
+
+  <!-- IURI -->
+  <adapter
+      factory=".adapters.CusyURIJsonSchemaProvider"
+      />
+
+  <!-- IDate -->
+  <adapter
+      factory=".adapters.CusyDateJsonSchemaProvider"
+      />
+
+  <!-- IDatetime -->
+  <adapter
+      factory=".adapters.CusyDatetimeJsonSchemaProvider"
+      />
+
+  <!-- IChoice -->
+  <adapter
+      factory=".adapters.CusyChoiceJsonSchemaProvider"
+      />
+
+  <!-- ILabel -->
+  <adapter
+      factory=".adapters.LabelJsonSchemaProvider"
+      />
+
+  <!-- IRichLabel -->
+  <adapter
+      factory=".adapters.RichLabelJsonSchemaProvider"
+      />
+
+  <!-- Get the json-schema representation. -->
+  <plone:service
+      factory=".get.EasyFormSchemaGet"
+      for="collective.easyform.interfaces.IEasyForm"
+      layer="cusy.restapi.easyform.interfaces.ICusyRestapiEasyformLayer"
+      method="GET"
+      name="@form"
+      permission="zope2.View"
+      />
+
+  <!-- Post the data from a json-schema based form. -->
+  <plone:service
+      factory=".post.EasyFormPost"
+      for="collective.easyform.interfaces.IEasyForm"
+      layer="cusy.restapi.easyform.interfaces.ICusyRestapiEasyformLayer"
+      method="POST"
+      name="@form"
+      permission="zope2.View"
+    />
+
+</configure>

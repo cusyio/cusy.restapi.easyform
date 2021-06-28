@@ -4,4 +4,8 @@
 
   <include file="profiles.zcml" />
 
+  <include package="collective.easyform" />
+  <include package=".serializer" />
+  <include package=".services" />
+
 </configure>

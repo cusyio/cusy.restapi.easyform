@@ -2,7 +2,8 @@
 """Setup tests for this package."""
 from cusy.restapi.easyform.testing import INTEGRATION_TESTING  # noqa: E501
 from plone import api
-from plone.app.testing import setRoles, TEST_USER_ID
+from plone.app.testing import setRoles
+from plone.app.testing import TEST_USER_ID
 
 import unittest
 
@@ -36,6 +37,14 @@ class TestSetup(unittest.TestCase):
         from plone.browserlayer import utils
 
         self.assertIn(ICusyRestapiEasyformLayer, utils.registered_layers())
+
+    def test_collective_easyform_installed(self):
+        """Test if collective.easyform is installed."""
+        self.assertTrue(self.installer.isProductInstalled("collective.easyform"))
+
+    def test_plone_restapi_installed(self):
+        """Test if plone.restapi is installed."""
+        self.assertTrue(self.installer.isProductInstalled("plone.restapi"))
 
 
 class TestUninstall(unittest.TestCase):
