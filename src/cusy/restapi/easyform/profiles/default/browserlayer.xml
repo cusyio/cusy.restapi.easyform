@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layers>
+  <layer
+      name="cusy.restapi.easyform"
+      interface="cusy.restapi.easyform.interfaces.ICusyRestapiEasyformLayer"
+      />
+</layers>
