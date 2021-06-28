@@ -1,0 +1,21 @@
+{
+  "files.associations": {
+    "*.zcml": "xml"
+  },
+  "files.exclude": {
+    "**/*.py[co]": true,
+    "**/*.so": true,
+    "**/__pycache__": true
+  },
+  "python.autoComplete.extraPaths": [
+    "parts/omelette"
+  ],
+  "python.formatting.provider": "black",
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": "${workspaceFolder}/bin/flake8",
+  "python.sortImports.path": "${workspaceFolder}/bin/isort",
+  "python.analysis.extraPaths": [
+    "parts/omelette"
+  ],
+  "python.pythonPath": ".venv/bin/python"
+}
