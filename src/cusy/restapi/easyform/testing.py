@@ -21,11 +21,12 @@ class CusyRestapiEasyformLayer(PloneSandboxLayer):
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
         import plone.restapi
+
         self.loadZCML(package=plone.restapi)
         self.loadZCML(package=cusy.restapi.easyform)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'cusy.restapi.easyform:default')
+        applyProfile(portal, "cusy.restapi.easyform:default")
 
 
 FIXTURE = CusyRestapiEasyformLayer()
@@ -37,17 +38,17 @@ INTEGRATION_TESTING = IntegrationTesting(
 )
 
 
-CUSY_RESTAPI_EASYFORM_FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(CUSY_RESTAPI_EASYFORM_FIXTURE,),
-    name='CusyRestapiEasyformLayer:FunctionalTesting',
+FUNCTIONAL_TESTING = FunctionalTesting(
+    bases=(FIXTURE,),
+    name="CusyRestapiEasyformLayer:FunctionalTesting",
 )
 
 
-CUSY_RESTAPI_EASYFORM_ACCEPTANCE_TESTING = FunctionalTesting(
+ACCEPTANCE_TESTING = FunctionalTesting(
     bases=(
-        CUSY_RESTAPI_EASYFORM_FIXTURE,
+        FIXTURE,
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         z2.ZSERVER_FIXTURE,
     ),
-    name='CusyRestapiEasyformLayer:AcceptanceTesting',
+    name="CusyRestapiEasyformLayer:AcceptanceTesting",
 )
