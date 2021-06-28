@@ -4,10 +4,11 @@
 
 .. image:: https://github.com/cusyio/cusy.restapi.easyform/workflows/ci/badge.svg
     :target: https://github.com/cusyio/cusy.restapi.easyform/actions
+    :alt: CI Status
 
-.. image:: https://coveralls.io/repos/github/cusyio/cusy.restapi.easyform/badge.svg?branch=main
-    :target: https://coveralls.io/github/cusyio/cusy.restapi.easyform?branch=main
-    :alt: Coveralls
+.. image:: https://codecov.io/gh/cusyio/cusy.restapi.easyform/branch/main/graph/badge.svg?token=3JU2SVF5TE
+    :target: https://codecov.io/gh/cusyio/cusy.restapi.easyform
+    :alt: Coverage Status
 
 .. image:: https://img.shields.io/pypi/v/cusy.restapi.easyform.svg
     :target: https://pypi.python.org/pypi/cusy.restapi.easyform/
