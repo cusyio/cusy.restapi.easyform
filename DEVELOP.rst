@@ -3,15 +3,15 @@ Using the development buildout
 
 Create a virtualenv in the package::
 
-    $ virtualenv --clear .
+    $ virtualenv --clear .venv
 
 Install requirements with pip::
 
-    $ ./bin/pip install -r requirements.txt
+    $ .venv/bin/pip install -r requirements.txt
 
 Run buildout::
 
-    $ ./bin/buildout
+    $ .venv/bin/buildout
 
 Start Plone in foreground:
 
