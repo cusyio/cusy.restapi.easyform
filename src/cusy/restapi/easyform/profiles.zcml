@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="cusy.restapi.easyform">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="cusy.restapi.easyform"
+      directory="profiles/default"
+      description="Installs the cusy.restapi.easyform add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="cusy.restapi.easyform (uninstall)"
+      directory="profiles/uninstall"
+      description="Uninstalls the cusy.restapi.easyform add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.uninstall"
+      />
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="cusy.restapi.easyform-hiddenprofiles"
+      />
+
+</configure>
