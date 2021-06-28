@@ -5,8 +5,8 @@
 .. image:: https://github.com/cusyio/cusy.restapi.easyform/workflows/ci/badge.svg
     :target: https://github.com/cusyio/cusy.restapi.easyform/actions
 
-.. image:: https://coveralls.io/repos/github/cusyio/cusy.restapi.easyform/badge.svg?branch=master
-    :target: https://coveralls.io/github/cusyio/cusy.restapi.easyform?branch=master
+.. image:: https://coveralls.io/repos/github/cusyio/cusy.restapi.easyform/badge.svg?branch=main
+    :target: https://coveralls.io/github/cusyio/cusy.restapi.easyform?branch=main
     :alt: Coveralls
 
 .. image:: https://img.shields.io/pypi/v/cusy.restapi.easyform.svg
