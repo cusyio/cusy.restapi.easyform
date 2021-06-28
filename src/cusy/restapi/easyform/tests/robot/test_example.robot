@@ -10,7 +10,7 @@
 #
 # 1) Start robot server:
 #
-# $ bin/robot-server --reload-path src cusy.restapi.easyform.testing.CUSY_RESTAPI_EASYFORM_ACCEPTANCE_TESTING
+# $ bin/robot-server --reload-path src cusy.restapi.easyform.testing.ACCEPTANCE_TESTING
 #
 # 2) Run robot tests:
 #

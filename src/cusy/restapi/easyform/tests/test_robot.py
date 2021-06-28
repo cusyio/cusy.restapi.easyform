@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from cusy.restapi.easyform.testing import CUSY_RESTAPI_EASYFORM_ACCEPTANCE_TESTING  # noqa: E501
+from cusy.restapi.easyform.testing import ACCEPTANCE_TESTING  # noqa: E501
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered
 
@@ -19,10 +19,12 @@ def test_suite():
     for robot_test in robot_tests:
         robottestsuite = robotsuite.RobotTestSuite(robot_test)
         robottestsuite.level = ROBOT_TEST_LEVEL
-        suite.addTests([
-            layered(
-                robottestsuite,
-                layer=CUSY_RESTAPI_EASYFORM_ACCEPTANCE_TESTING,
-            ),
-        ])
+        suite.addTests(
+            [
+                layered(
+                    robottestsuite,
+                    layer=ACCEPTANCE_TESTING,
+                ),
+            ]
+        )
     return suite

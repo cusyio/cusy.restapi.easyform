@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
+from cusy.restapi.easyform.testing import INTEGRATION_TESTING  # noqa: E501
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
-from cusy.restapi.easyform.testing import CUSY_RESTAPI_EASYFORM_INTEGRATION_TESTING  # noqa: E501
 
 import unittest
 
@@ -17,7 +17,7 @@ except ImportError:
 class TestSetup(unittest.TestCase):
     """Test that cusy.restapi.easyform is properly installed."""
 
-    layer = CUSY_RESTAPI_EASYFORM_INTEGRATION_TESTING
+    layer = INTEGRATION_TESTING
 
     def setUp(self):
         """Custom shared utility setup for tests."""
@@ -44,7 +44,7 @@ class TestSetup(unittest.TestCase):
 
 class TestUninstall(unittest.TestCase):
 
-    layer = CUSY_RESTAPI_EASYFORM_INTEGRATION_TESTING
+    layer = INTEGRATION_TESTING
 
     def setUp(self):
         self.portal = self.layer['portal']

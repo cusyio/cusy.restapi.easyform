@@ -28,12 +28,12 @@ class CusyRestapiEasyformLayer(PloneSandboxLayer):
         applyProfile(portal, 'cusy.restapi.easyform:default')
 
 
-CUSY_RESTAPI_EASYFORM_FIXTURE = CusyRestapiEasyformLayer()
+FIXTURE = CusyRestapiEasyformLayer()
 
 
-CUSY_RESTAPI_EASYFORM_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(CUSY_RESTAPI_EASYFORM_FIXTURE,),
-    name='CusyRestapiEasyformLayer:IntegrationTesting',
+INTEGRATION_TESTING = IntegrationTesting(
+    bases=(FIXTURE,),
+    name="CusyRestapiEasyformLayer:IntegrationTesting",
 )
 
 
