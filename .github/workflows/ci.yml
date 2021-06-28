@@ -76,3 +76,8 @@ jobs:
       - name: Coverage report on python3.7
         run: tox -r -e coverage-report
         if: matrix.python-version == '3.7'
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
